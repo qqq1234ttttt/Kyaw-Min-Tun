@@ -10,19 +10,22 @@ body{
   background:black;
   height:100vh;
   font-family:Arial, sans-serif;
-  position:relative;
   text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
 }
 
 /* စာသား */
 .top-text{
-  margin-top:40px;
   color:#00ff00;
   font-size:40px;  
   font-weight:bold;
   text-shadow:0 0 10px #00ff00, 0 0 20px #00ff00;
   animation:glow 1.5s infinite alternate;
   line-height:1.6;
+  margin-bottom:40px;
 }
 
 @keyframes glow{
@@ -30,22 +33,9 @@ body{
   to { text-shadow:0 0 20px #00ff00, 0 0 30px #00ff00; }
 }
 
-/* Logo */
-img{
-  position:absolute;
-  top:60%;              
-  left:50%;
-  transform:translate(-50%, -50%);
-  width:420px;        
-  max-width:90%;
-}
-
 /* Download Button */
 .download-btn{
-  position:absolute;
-  top:60%;          /* logo အပေါ်နား */
-  left:50%;
-  transform:translate(-50%, -50%);
+  margin-bottom:20px;
   padding:12px 30px;
   font-size:18px;
   font-weight:bold;
@@ -62,6 +52,12 @@ img{
   background:white;
   box-shadow:0 0 25px #00ff00;
 }
+
+/* Logo */
+img{
+  width:420px;        
+  max-width:90%;
+}
 </style>
 </head>
 <body>
@@ -72,18 +68,15 @@ img{
   Ph no -09401565816 သို့ဆက်သွယ်စုံစမ်းနိုင်ပါတယ်
 </div>
 
-<!-- Download Button -->
 <button class="download-btn" onclick="downloadFile()">
   Download
 </button>
 
-<!-- Logo -->
 <img src="kyawmintunlogo.png">
 
 <script>
 function downloadFile(){
-  window.location.href = "yourfile.apk"; 
-  // ဒီနေရာမှာ download link ထည့်ပါ
+  window.location.href = "yourfile.apk";
 }
 </script>
 
