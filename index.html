@@ -13,8 +13,9 @@ body{
   position:relative;
   text-align:center;
 }
-  /*မိတ်ဆွေဘာလာရှာတာလဲဘာအလိုရှိလို့လဲဒဲ့လာမေးပါ*/  
-  .top-text{
+
+/* စာသား */
+.top-text{
   margin-top:40px;
   color:#00ff00;
   font-size:40px;  
@@ -23,10 +24,13 @@ body{
   animation:glow 1.5s infinite alternate;
   line-height:1.6;
 }
+
 @keyframes glow{
   from { text-shadow:0 0 5px #00ff00; }
   to { text-shadow:0 0 20px #00ff00, 0 0 30px #00ff00; }
 }
+
+/* Logo */
 img{
   position:absolute;
   top:60%;              
@@ -35,16 +39,53 @@ img{
   width:420px;        
   max-width:90%;
 }
+
+/* Download Button */
+.download-btn{
+  position:absolute;
+  top:50%;          /* logo အပေါ်နား */
+  left:50%;
+  transform:translate(-50%, -50%);
+  padding:12px 30px;
+  font-size:18px;
+  font-weight:bold;
+  color:black;
+  background:#00ff00;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  box-shadow:0 0 15px #00ff00;
+  transition:0.3s;
+}
+
+.download-btn:hover{
+  background:white;
+  box-shadow:0 0 25px #00ff00;
+}
 </style>
 </head>
 <body>
+
 <div class="top-text">
   မင်္ဂလာပါ ✨ <br><br>
   Facebook Service & Software ရေးပေးပါတယ် <br>
   Ph no -09401565816 သို့ဆက်သွယ်စုံစမ်းနိုင်ပါတယ်
 </div>
 
+<!-- Download Button -->
+<button class="download-btn" onclick="downloadFile()">
+  Download
+</button>
+
+<!-- Logo -->
 <img src="kyawmintunlogo.png">
+
+<script>
+function downloadFile(){
+  window.location.href = "yourfile.apk"; 
+  // ဒီနေရာမှာ download link ထည့်ပါ
+}
+</script>
 
 </body>
 </html>
